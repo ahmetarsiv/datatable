@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Tablo</title>
+
+    <link type="text/css" href="assets/css/app.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="page-content">
+    <div class="table">
+        <div class="grid-container">
+            <div class="grid-top">
+                <div class="datagrid-filters">
+                    <div class="filter-left">
+                        <div></div>
+                    </div>
+                </div>
+                <div id="datagrid-filters" class="datagrid-filters">
+                    <div>
+                        <div class="search-filter">
+                            <input type="search" id="search-field" placeholder="Search Here..." class="control">
+                            <div class="icon-wrapper"><span class="icon search-icon search-btn"></span></div>
+                        </div>
+                    </div>
+                    <div class="filter-right">
+                        <div class="dropdown-filters per-page">
+                            <div class="control-group">
+                                <label for="perPage" class="per-page-label">Items Per Page</label>
+                                <select id="perPage" name="perPage" class="control">
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                    <option value="40">40</option>
+                                    <option value="50">50</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="dropdown-filters">
+                            <div class="dropdown-open">
+                                <div class="dropdown-toggle">
+                                    <div class="grid-dropdown-header">
+                                        <span class="name">Filter</span>
+                                        <i class="icon arrow-down-icon active"></i>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list dropdown-container" style="display: none;">
+                                    <ul>
+                                        <li>
+                                            <div class="control-group">
+                                                <select class="filter-column-select control">
+                                                    <option selected="selected" disabled="disabled">
+                                                        Select Column
+                                                    </option>
+                                                    <option value="increment_id">ID</option>
+                                                    <option value="base_sub_total">Sub Total</option>
+                                                    <option value="base_grand_total">Grand Total</option>
+                                                    <option value="created_at">Order Date</option>
+                                                    <option value="channel_name">Channel Name</option>
+                                                    <option value="status">Status</option>
+                                                    <option value="billed_to">Billed To</option>
+                                                    <option value="shipped_to">Shipped To</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <button class="btn btn-sm btn-primary apply-filter">Apply</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-advance">
+                <div class="filtered-tags"></div>
+                <div class="records-count-container">
+                    <span class="datagrid-count">0 Record(s) found</span>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr style="height: 65px;">
+                        <th class="grid_head" style="width: 50px;" id="mastercheckbox">
+                            <span class="checkbox">
+                                <input type="checkbox" name="checkbox">
+                                <label for="checkbox" class="checkbox-view"></label>
+                            </span>
+                        </th>
+                        <th class="grid_head sortable">ID</th>
+                        <th class="grid_head sortable">Sub Total</th>
+                        <th class="grid_head sortable">Grand Total</th>
+                        <th class="grid_head sortable">Order Date</th>
+                        <th class="grid_head sortable">Channel Name</th>
+                        <th class="grid_head sortable">Status</th>
+                        <th class="grid_head sortable">Billed To</th>
+                        <th class="grid_head sortable">Shipped To</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <span class="checkbox">
+                                <input type="checkbox" name="checkbox">
+                                <label for="checkbox" class="checkbox-view"></label>
+                            </span>
+                        </td>
+                        <td data-value="id">1</td>
+                        <td data-value="id">₺ 50.00</td>
+                        <td data-value="id">₺ 50.00</td>
+                        <td data-value="id">04/05/2022</td>
+                        <td data-value="id">Default</td>
+                        <td data-value="id">Aktif</td>
+                        <td data-value="id">04/05/2022</td>
+                        <td data-value="id">04/05/2022</td>
+                        <td data-value="Actions" class="actions" style="white-space: nowrap; width: 100px;">
+                            <div class="action">
+                                <a id="1" href="javascript:void(0);" target="" title="Edit">
+                                    <span class="icon pencil-lg-icon"></span>
+                                </a>
+                                <a id="0" href="javascript:void(0);" target="" title="Delete">
+                                    <span class="icon trash-icon"></span>
+                                </a>
+                            </div>
+                        </td>
+                        <!--<td colspan="10"><p style="text-align: center;">No Records Found</p></td>-->
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
